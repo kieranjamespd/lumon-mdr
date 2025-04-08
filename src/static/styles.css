@@ -1,0 +1,54 @@
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
+footer {visibility: hidden;}
+.block-container {padding-top: 0; padding-bottom: 0;}
+.stApp {background: #001214 !important;}
+
+.mdr-interface {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes scanline {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 255, 0, 0.02) 50%
+    );
+    background-size: 100% 4px;
+    animation: scanline 10s linear infinite;
+    z-index: 2147483647;
+}
+
+.number-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--lumon-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: float 4s ease-in-out infinite;
+    user-select: none;
+    position: relative;
+    text-shadow: 0 0 5px #39FFE1;
+}
+
+.number-cell.hover-effect {
+    transform: scale(1.8) !important;
+    text-shadow: 0 0 10px #39FFE1 !important;
+}
+
+/* Add all other existing styles from the Python file here */ 
